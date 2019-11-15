@@ -108,22 +108,22 @@ def over?
   end
 end
 
-
-
-
-
-
-
-
-
-
-
-  def winner(board)
-    combo = won?(board)
-    if combo
-      return board[combo[0]]
-    end
+def winner
+  combo = won?
+  if combo
+    return @board[combo[0]]
   end
+end
+
+
+
+
+
+
+
+
+
+
 
 
   def play(board)
