@@ -36,23 +36,23 @@ class TicTacToe
 !(@board[index].nil? || @board[index] == " ")
 end
 
-
-
-
-
-
-
-
-
-
-
-  def valid_move?(board,index)
-    if board[index] == "X" || board[index] == "O" || !index.between?(0, 8)
-      return false
-    else
-      return true
-    end
+def valid_move?(index)
+  if @board[index] == "X" || @board[index] == "O" || !index.between?(0, 8)
+    return false
+  else
+    return true
   end
+end
+
+
+
+
+
+
+
+
+
+
 
   def turn_count(board)
     turncount = 0
