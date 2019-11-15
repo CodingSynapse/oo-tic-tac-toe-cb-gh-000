@@ -28,7 +28,9 @@ class TicTacToe
   end
 
 
-
+  def move(position, value)
+      @board[position] = value
+  end
 
 
 
@@ -45,10 +47,6 @@ class TicTacToe
     else
       return true
     end
-  end
-
-  def move(board, position, value)
-      board[position] = value
   end
 
   def turn_count(board)
