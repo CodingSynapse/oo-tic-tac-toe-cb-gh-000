@@ -71,35 +71,35 @@ def turn
   end
 end
 
+def won?(board)
 
+    WIN_COMBINATIONS.each do |index|
+      combo_0 = index[0]
+      combo_1 = index[1]
+      combo_2 = index[2]
 
+      position_1 = @board[combo_0]
+      position_2 = @board[combo_1]
+      position_3 = @board[combo_2]
 
-
-
-
-
-
-
-
-
-  def won?(board)
-
-      WIN_COMBINATIONS.each do |index|
-        combo_0 = index[0]
-        combo_1 = index[1]
-        combo_2 = index[2]
-
-        position_1 = board[combo_0]
-        position_2 = board[combo_1]
-        position_3 = board[combo_2]
-
-        if position_1 == "X" && position_2 =="X" && position_3 == "X" ||
-           position_1 == "O" && position_2 =="O" && position_3 == "O"
-          return index
-        end
+      if position_1 == "X" && position_2 =="X" && position_3 == "X" ||
+         position_1 == "O" && position_2 =="O" && position_3 == "O"
+        return index
       end
-      return false
-  end
+    end
+    return false
+end
+
+
+
+
+
+
+
+
+
+
+
 
   def full?(board)
     board.all? do |move|
