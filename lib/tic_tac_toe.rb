@@ -102,22 +102,21 @@ def draw?
   end
 end
 
-
-
-
-
-
-
-
-
-
-
-
-  def over?(board)
-    if draw?(board) || full?(board) || won?(board)
-      true
-    end
+def over?
+  if draw? || full? || won?
+    true
   end
+end
+
+
+
+
+
+
+
+
+
+
 
   def winner(board)
     combo = won?(board)
