@@ -96,22 +96,22 @@ def full?
   end
 end
 
-
-
-
-
-
-
-
-
-
-
-
-  def draw?(board)
-    if !won?(board) && full?(board)
-      return true
-    end
+def draw?
+  if !won?(@board) && full?(@board)
+    return true
   end
+end
+
+
+
+
+
+
+
+
+
+
+
 
   def over?(board)
     if draw?(board) || full?(board) || won?(board)
