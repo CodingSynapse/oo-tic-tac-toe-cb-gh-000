@@ -44,25 +44,26 @@ def valid_move?(index)
   end
 end
 
-
-
-
-
-
-
-
-
-
-
-  def turn_count(board)
-    turncount = 0
-    board.each do |pos|
-      if pos == "X" || pos == "O"
-        turncount += 1
-      end
+def turn_count
+  turncount = 0
+  @board.each do |pos|
+    if pos == "X" || pos == "O"
+      turncount += 1
     end
-    return turncount
   end
+  return turncount
+end
+
+
+
+
+
+
+
+
+
+
+
 
   def current_player(board)
   status = turn_count(board)
