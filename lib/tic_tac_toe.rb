@@ -54,25 +54,25 @@ def turn_count
   return turncount
 end
 
-
-
-
-
-
-
-
-
-
-
-
-  def current_player(board)
-  status = turn_count(board)
-    if status.even?
-      return "X"
-    else
-      return "O"
-    end
+def current_player
+status = turn_count(@board)
+  if status.even?
+    return "X"
+  else
+    return "O"
   end
+end
+
+
+
+
+
+
+
+
+
+
+
 
   def won?(board)
 
