@@ -90,22 +90,22 @@ def won?
     return false
 end
 
-
-
-
-
-
-
-
-
-
-
-
-  def full?(board)
-    board.all? do |move|
-      move == "X" || move == "O"
-    end
+def full?
+  @board.all? do |move|
+    move == "X" || move == "O"
   end
+end
+
+
+
+
+
+
+
+
+
+
+
 
   def draw?(board)
     if !won?(board) && full?(board)
