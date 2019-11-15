@@ -71,7 +71,7 @@ def turn
   end
 end
 
-def won?(board)
+def won?
 
     WIN_COMBINATIONS.each do |index|
       combo_0 = index[0]
